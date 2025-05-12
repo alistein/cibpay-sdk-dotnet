@@ -1,0 +1,9 @@
+﻿<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CibPay.Core\CibPay.Core.csproj" Type="Classic C#" />
+    <Project Path="src/CibPay.Http\CibPay.Http.csproj" Type="Classic C#" />
+    <Project Path="src/CibPay.Sample\CibPay.Sample.csproj" Type="Classic C#" />
+    <Project Path="src/CibPay.Sdk\CibPay.Sdk.csproj" Type="Classic C#" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
