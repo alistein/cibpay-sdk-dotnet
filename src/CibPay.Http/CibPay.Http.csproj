@@ -4,7 +4,11 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>CibPyay.Http</RootNamespace>
+        <RootNamespace>CibPay.Http</RootNamespace>
     </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\CibPay.Core\CibPay.Core.csproj" />
+    </ItemGroup>
 
 </Project>
