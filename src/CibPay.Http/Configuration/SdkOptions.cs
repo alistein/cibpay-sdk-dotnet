@@ -1,5 +1,7 @@
 using System.Text;
 
+namespace CibPay.Http.Configuration;
+
 /// <summary>
 /// Represents configuration options for SDK authentication and payment processing.
 /// This class encapsulates required and optional parameters for connecting to a service,
@@ -102,4 +104,3 @@ public class SdkOptions
     /// </summary>
     public string Credentials => Convert.ToBase64String(Encoding.ASCII.GetBytes($"{Username}:{Password}"));
 }
-

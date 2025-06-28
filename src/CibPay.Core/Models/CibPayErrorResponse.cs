@@ -13,4 +13,22 @@ public class CibPayErrorResponse
     
     [JsonPropertyName("order_id")]
     public string? OrderId { get; set; }
+
+    [JsonPropertyName("errors")] 
+    public List<FailureDetail> Errors { get; set; } = [];
+}
+
+public class FailureDetail
+{
+    [JsonPropertyName("attribute")]
+    public string? Attribute { get; set; }
+
+    [JsonPropertyName("message")]
+    public string? Message { get; set; }
+
+    [JsonPropertyName("uri")]
+    public string? Uri { get; set; }
+
+    [JsonPropertyName("details")]
+    public List<object>? Details { get; set; }
 }

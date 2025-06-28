@@ -1,12 +1,14 @@
 using System.Net;
+using CibPaySdk.Core.Models;
 
 namespace CibPaySdk.Core.Exceptions;
 
-public class CibPayApiException(string failureMessage, string failureType, HttpStatusCode httpStatusCode, string? orderId = null)
-    : Exception(failureMessage)
+public class CibPayApiException(CibPayErrorResponse errorResponse, HttpStatusCode httpStatusCode)
+    : Exception(errorResponse.FailureMessage)
 {
-    public string FailureMessage { get; } = failureMessage;
-    public string FailureType { get; } = failureType;
-    public string? OrderId { get; } = orderId;
-    public HttpStatusCode StatusCode { get; set; }
+    public string FailureMessage { get; } = errorResponse.FailureMessage;
+    public string FailureType { get; } = errorResponse.FailureType;
+    public string? OrderId { get; } = errorResponse.OrderId;
+    public List<FailureDetail> ValidationErrors { get; } = errorResponse.Errors;
+    public HttpStatusCode StatusCode { get; } = httpStatusCode;
 }
