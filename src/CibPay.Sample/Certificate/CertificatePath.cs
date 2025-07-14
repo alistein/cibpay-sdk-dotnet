@@ -1,11 +1,11 @@
 using System.Reflection;
 
-namespace CibPayTest.Certificate;
+namespace CibPay.Sample.Certificate;
 
 public class CertificatePath
 {
     public string CurrentPath { get; set; }
-    
+
     public CertificatePath()
     {
         var assemblyFolder = Assembly.GetExecutingAssembly().Location;
