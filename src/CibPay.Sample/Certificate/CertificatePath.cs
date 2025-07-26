@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace CibPayTest.Certificate;
+namespace CibPay.Sample.Certificate;
 
 public class CertificatePath
 {

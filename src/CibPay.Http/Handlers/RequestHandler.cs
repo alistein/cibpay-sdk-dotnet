@@ -1,8 +1,5 @@
-using System.Net.Http.Headers;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json;
-using CibPay.Http.Configuration;
 using CibPaySdk.Core.Exceptions;
 using CibPaySdk.Core.Models;
 

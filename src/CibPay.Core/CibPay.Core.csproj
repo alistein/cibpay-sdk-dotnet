@@ -7,8 +7,4 @@
         <RootNamespace>CibPaySdk.Core</RootNamespace>
     </PropertyGroup>
 
-    <ItemGroup>
-      <Folder Include="Converters\" />
-    </ItemGroup>
-
 </Project>

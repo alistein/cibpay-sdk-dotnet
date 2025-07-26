@@ -5,13 +5,13 @@ using System.Text.Json.Serialization;
 public class OrderResponse
 {
     [JsonPropertyName("amount")]
-    public decimal Amount { get; set; }
+    public string? Amount { get; set; }
 
     [JsonPropertyName("amount_charged")]
-    public decimal? AmountCharged { get; set; }
+    public string? AmountCharged { get; set; }
 
     [JsonPropertyName("amount_refunded")]
-    public decimal? AmountRefunded { get; set; }
+    public string? AmountRefunded { get; set; }
 
     [JsonPropertyName("auth_code")]
     public string? AuthCode { get; set; }
