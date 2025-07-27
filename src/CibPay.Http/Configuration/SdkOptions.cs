@@ -27,7 +27,7 @@ namespace CibPay.Http.Configuration;
 ///     ExpirationTimeout = "1m",
 ///     Language = "AZ"
 /// };
-/// 
+///
 /// </code>
 /// </example>
 public class SdkOptions
@@ -84,7 +84,7 @@ public class SdkOptions
     /// Gets or sets the currency code for transactions (e.g., "AZN", "EUR").
     /// If null, the default currency is used.
     /// </summary>
-    public string? Currency { get; set; } 
+    public string? Currency { get; set; }
 
     /// <summary>
     /// Gets or sets the expiration timeout for transactions, in a format specified by the service.
@@ -102,5 +102,6 @@ public class SdkOptions
     /// Gets the Base64-encoded credentials string combining Username and Password.
     /// The format is "Username:Password" encoded in ASCII.
     /// </summary>
-    public string Credentials => Convert.ToBase64String(Encoding.ASCII.GetBytes($"{Username}:{Password}"));
+    public string Credentials =>
+        Convert.ToBase64String(Encoding.ASCII.GetBytes($"{Username}:{Password}"));
 }
