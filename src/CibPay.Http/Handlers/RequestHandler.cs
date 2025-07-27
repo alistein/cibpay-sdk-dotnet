@@ -1,8 +1,5 @@
-using System.Net.Http.Headers;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.Json;
-using CibPay.Http.Configuration;
 using CibPaySdk.Core.Exceptions;
 using CibPaySdk.Core.Models;
 
@@ -17,10 +14,13 @@ public class RequestHandler
         _httpClient = httpClient;
     }
 
-    internal async Task<T?> SendRequestAsync<T>(HttpMethod method, string endpoint, object? body = null,
-        CancellationToken cancellationToken = default)
+    internal async Task<T?> SendRequestAsync<T>(
+        HttpMethod method,
+        string endpoint,
+        object? body = null,
+        CancellationToken cancellationToken = default
+    )
     {
-        
         using var request = new HttpRequestMessage(method, endpoint);
 
         T? response = default;
@@ -33,19 +33,38 @@ public class RequestHandler
 
         using var providerResponse = await _httpClient.SendAsync(request, cancellationToken);
 
-        var stringResponseContent = await providerResponse.Content.ReadAsStringAsync(cancellationToken);
+        System.Console.WriteLine(endpoint);
+
+        var locationHeader = providerResponse.Headers.Location?.ToString();
+
+        var stringResponseContent = await providerResponse.Content.ReadAsStringAsync(
+            cancellationToken
+        );
 
         if (providerResponse.IsSuccessStatusCode)
         {
             response = JsonSerializer.Deserialize<T>(stringResponseContent);
+
+            // If the response is OrderProviderResponse and we have a location header, set it
+            if (
+                response is OrderProviderResponse orderResponse
+                && !string.IsNullOrEmpty(locationHeader)
+            )
+            {
+                orderResponse.PaymentUrl = locationHeader;
+                orderResponse.RawResult = stringResponseContent;
+            }
         }
         else
         {
-            var deserializeErrorContent = JsonSerializer.Deserialize<CibPayErrorResponse>(stringResponseContent);
+            var deserializeErrorContent = JsonSerializer.Deserialize<CibPayErrorResponse>(
+                stringResponseContent
+            );
 
             throw new CibPayApiException(
                 deserializeErrorContent ?? new CibPayErrorResponse(),
-                httpStatusCode: providerResponse.StatusCode);
+                httpStatusCode: providerResponse.StatusCode
+            );
         }
 
         return response;
