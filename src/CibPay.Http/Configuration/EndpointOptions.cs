@@ -1,8 +1,8 @@
 namespace CibPay.Http.Configuration;
 
-public static class ApiEndpoints
+internal static class ApiEndpoints
 {
-    public const string Ping = "ping";
-    public const string Create = "orders/create";
-    public const string Get = "orders/{id}?expand={expand}";
+    internal const string Ping = "ping";
+    internal const string Create = "orders/create";
+    internal const string Get = "orders/{id}?expand={expand}";
 }

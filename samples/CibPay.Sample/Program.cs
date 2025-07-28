@@ -1,6 +1,5 @@
 ﻿using CibPay.Http.Configuration;
 using CibPay.Sdk;
-using CibPaySdk.Core.Models;
 using CibPaySdk.Core.Types;
 using Dumpify;
 
@@ -21,4 +20,6 @@ var cibPayClient = CibPayClientFactory.Create(
 //     new CreateOrderRequest { Amount = 100 }
 // );
 
-(await cibPayClient.Orders.GetAsync("94856904049551304", OrderExpansions.Client)).Dump();
+// creationResponse.Dump();
+
+(await cibPayClient.Orders.GetAsync("94856904049551304", OrderExpansions.Issuer)).Dump();

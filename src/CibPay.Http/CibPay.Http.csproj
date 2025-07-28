@@ -7,6 +7,12 @@
         <RootNamespace>CibPay.Http</RootNamespace>
     </PropertyGroup>
 
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>CibPay.Sdk</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
     <ItemGroup>
       <ProjectReference Include="..\CibPay.Core\CibPay.Core.csproj" />
     </ItemGroup>

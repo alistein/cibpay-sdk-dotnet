@@ -6,7 +6,7 @@ using CibPaySdk.Core.Types;
 
 namespace CibPay.Http.Clients;
 
-public class OrderClient : IOrderClient
+internal class OrderClient : IOrderClient
 {
     private readonly RequestHandler _requestHandler;
 

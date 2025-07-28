@@ -11,7 +11,7 @@ public enum OrderExpansions
     OperationsCashflow
 }
 
-public static class GetOrderExpansionsExtensions
+public static class OrderExpansionsExtensions
 {
     public static string ToQueryParam(this OrderExpansions orderExpansion) =>
         orderExpansion switch

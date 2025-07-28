@@ -48,10 +48,9 @@ public class RequestHandler
             // If the response is OrderProviderResponse and we have a location header, set it
             if (
                 response is OrderProviderResponse orderResponse
-                && !string.IsNullOrEmpty(locationHeader)
             )
             {
-                orderResponse.PaymentUrl = locationHeader;
+                orderResponse.PaymentUrl = string.IsNullOrEmpty(locationHeader) ? null : locationHeader;
                 orderResponse.RawResult = stringResponseContent;
             }
         }

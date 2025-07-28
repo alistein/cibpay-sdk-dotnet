@@ -1,6 +1,7 @@
 namespace CibPaySdk.Core.Models;
 
 using System.Text.Json.Serialization;
+using CibPaySdk.Core.Types;
 
 public class OrderResponse
 {
@@ -59,7 +60,10 @@ public class OrderResponse
     public string? Segment { get; set; }
 
     [JsonPropertyName("status")]
-    public string? Status { get; set; }
+    public string? StatusText { get; set; }
+
+    [JsonIgnore]
+    public OrderStatuses? Status => OrderStatusUtils.ParseToOrderStatus(StatusText);
 
     [JsonPropertyName("updated")]
     public string? Updated { get; set; }
