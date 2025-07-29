@@ -1,9 +1,11 @@
-![Betalgo Ranul OpenAI Github readme banner](https://github.com/user-attachments/assets/3a76387f-e033-4ee2-a9c7-2ebf047c4d90)
+![Cibpay .NET SDK Github readme banner](docs/assets/CibPayBanner.png)
 
-## Overview
+
+
 A .NET Library for accessing Cibpay's api, provided as a community library. This Library allows you to integrate OpenAI's capabilities into your .NET applications with ease.
 
-⭐ We appreciate your star, it helps! ![GitHub Repo stars](https://img.shields.io/github/stars/betalgo/openai)  
+⭐ We appreciate your star, it helps! ![GitHub Repo stars](https://img.shields.io/github/stars/alistein/cibpay-sdk-dotnet)
+
  #### Community Links
 - [![Discord](https://img.shields.io/discord/1250841506785529916?label=Discord)](https://discord.gg/gfgHsWnGxy) Please come and help us build the .NET AI community  
 - [![Static Badge](https://img.shields.io/badge/Reddit-Betalgo%20Developers-orange)](https://www.reddit.com/r/BetalgoDevelopers)
