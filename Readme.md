@@ -1,4 +1,4 @@
-![Cibpay .NET SDK Github readme banner](documentation/docs/assets/CibPayBanner.png)
+![Cibpay .NET SDK Github readme banner](docs/assets/CibPayBanner.png)
 
 
 A .NET Library for accessing Cibpay's api, provided as a official library. This Library allows you to integrate Cibpay capabilities into your .NET applications with ease.
