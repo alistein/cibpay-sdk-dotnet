@@ -1,4 +1,4 @@
-![Cibpay .NET SDK Github readme banner](documentation/docs/assets/CibPayBanner.png)
+![Cibpay .NET SDK Github readme banner](assets/CibPayBanner.png)
 
 
 A .NET Library for accessing Cibpay's api, provided as a official library. This Library allows you to integrate Cibpay capabilities into your .NET applications with ease.
@@ -14,8 +14,8 @@ A .NET Library for accessing Cibpay's api, provided as a official library. This 
 dotnet add package CibPay.Sdk
 ```
 
-## Documentation and Links
-- [Documentation](https://github.com/betalgo/openai/wiki)
+## Links
+- [Github Repo](https://github.com/alistein/cibpay-sdk-dotnet)
 - [Feature Availability Table](https://github.com/betalgo/openai/wiki/Feature-Availability)
 - [Change Logs](https://github.com/betalgo/openai/wiki/Change-Logs)
 - [Cibpay Website](https://cibpay.az/en/home/)
