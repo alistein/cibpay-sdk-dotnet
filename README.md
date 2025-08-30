@@ -63,23 +63,6 @@ var order = await client.Orders.CreateAsync(new CreateOrderRequest
 Console.WriteLine($"Order created: {order.Data.Id}");
 ```
 
-## Documentation Navigation
-
-### 🚀 Getting Started
-- **[Installation](getting-started/installation.md)** - Package installation and prerequisites
-- **[Quick Start](getting-started/quick-start.md)** - Step-by-step tutorial for your first payment
-- **[Configuration](getting-started/configuration.md)** - Complete configuration guide
-
-### 📚 Core Concepts  
-- **[Authentication & Security](core-concepts/authentication.md)** - Certificate setup and security best practices
-- **[Order Lifecycle](core-concepts/order-lifecycle.md)** - Understanding order statuses and transitions
-- **[Payment Flow](core-concepts/payment-flow.md)** - End-to-end payment process
-
-### 📖 API Reference
-- **[Client Setup](api-reference/client-setup.md)** - Client initialization and dependency injection
-- **[Order Operations](api-reference/orders/create-order.md)** - Creating and retrieving orders
-- **[Models & Types](api-reference/models/request-models.md)** - Request/response models and enums
-
 ## Supported Operations
 
 | Operation | Status | Description |
@@ -91,9 +74,11 @@ Console.WriteLine($"Order created: {order.Data.Id}");
 
 
 ## Links & Resources
+- **[Official Documentation](https://docs.microsoft.com/en-us/dotnet/)** - CibPay SDK .NET docs
 - **[Github Repository](https://github.com/alistein/cibpay-sdk-dotnet)** - Source code and issues
 - **[CibPay Website](https://cibpay.az/en/home/)** - Official CibPay information
 - **[.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)** - Microsoft .NET docs
+
 
 ---
 
