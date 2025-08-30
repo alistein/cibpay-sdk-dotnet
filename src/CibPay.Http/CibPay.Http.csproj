@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+    <!-- Target Framework -->
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>CibPay.Http</RootNamespace>
+
+    <!-- Internal library - not packaged separately -->
+    <IsPackable>false</IsPackable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <!-- Assembly Attributes -->
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>CibPay.Sdk</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <!-- Project References -->
+    <ItemGroup>
+    <ProjectReference Include="..\CibPay.Core\CibPay.Core.csproj" />
+    </ItemGroup>
+
+</Project>

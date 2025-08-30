@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Dumpify" Version="0.6.6" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/CibPay.Sdk/CibPay.Sdk.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Certificate\api-cibpay.p12">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

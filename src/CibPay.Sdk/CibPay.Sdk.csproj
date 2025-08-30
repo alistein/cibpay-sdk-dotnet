@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- Package Identity -->
+    <PackageId>CibPay.Sdk</PackageId>
+    <Version>1.0.0-preview.1</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+
+    <!-- Target Framework -->
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <!-- Package Metadata -->
+    <Title>CibPay .NET SDK</Title>
+    <Description>Complete .NET SDK for CibPay payment processing API. Provides secure, easy-to-use
+      integration with Azerbaijan's CibPay banking system including order management,
+      certificate-based authentication, and comprehensive error handling. This single package
+      contains all necessary components: Core models, HTTP client, and SDK wrapper.</Description>
+    <Summary>Complete .NET SDK for CibPay payment processing API with secure authentication and
+      order management.</Summary>
+    <PackageTags>cibpay;payment;sdk;dotnet;banking;azerbaijan;api;orders;finance;complete;all-in-one</PackageTags>
+    <Category>Libraries</Category>
+
+    <!-- Author and Company Information -->
+    <Authors>Ali Aliyev</Authors>
+    <Company>CibPay</Company>
+    <Product>CibPay .NET SDK</Product>
+    <Copyright>Copyright © CibPay 2025</Copyright>
+
+    <!-- URLs and Links -->
+    <PackageProjectUrl>https://github.com/alistein/cibpay-sdk-dotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/alistein/cibpay-sdk-dotnet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageIcon>CibPayFavicon.png</PackageIcon>
+
+    <!-- Release Notes -->
+    <PackageReleaseNotes>
+      Preview release of CibPay .NET SDK featuring:
+      - Complete all-in-one package (no additional dependencies needed)
+      - Certificate-based authentication
+      - Order creation and retrieval
+      - Comprehensive error handling
+      - Async/await support
+      - Type-safe models
+      - Simple installation: dotnet add package CibPay.Sdk
+    </PackageReleaseNotes>
+
+    <!-- Build Configuration -->
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+
+    <!-- Assembly Information -->
+    <AssemblyTitle>CibPay .NET SDK</AssemblyTitle>
+    <AssemblyDescription>Official .NET SDK for CibPay payment processing API</AssemblyDescription>
+    <AssemblyConfiguration>Release</AssemblyConfiguration>
+    <AssemblyCompany>CibPay</AssemblyCompany>
+    <AssemblyProduct>CibPay .NET SDK</AssemblyProduct>
+    <NeutralLanguage>en-US</NeutralLanguage>
+  </PropertyGroup>
+
+  <!-- Package Files -->
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="" />
+    <None Include="../../LICENSE" Pack="true" PackagePath="" />
+    <None Include="../../docs/assets/CibPayFavicon.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+  <!-- Project References -->
+  <ItemGroup>
+    <ProjectReference Include="../CibPay.Http/CibPay.Http.csproj" />
+  </ItemGroup>
+
+</Project>

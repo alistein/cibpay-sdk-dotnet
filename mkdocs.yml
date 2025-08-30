@@ -1,0 +1,94 @@
+site_name: .NET Documentation
+docs_dir: docs
+repo_url: https://github.com/alistein/cibpay-sdk-dotnet #change this later
+repo_name: CibPay.SDK
+#edit_uri: set this
+site_author: Ali Aliyev
+
+theme: 
+  features:
+    - navigation.tracking
+    - navigation.top
+    - search.suggest
+    - search.highlight
+  name: material
+  navigation_depth: 4
+  titles_only: False
+  logo: assets/CibPayLogo.svg
+  favicon: assets/CibPayFavicon.svg
+  language: en
+  font:
+    text: Sora
+    code: Roboto Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      primary: white
+      accent: deep purple
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: black
+      accent: deep purple
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - smarty
+  - sane_lists
+  - fenced_code
+  - meta
+  - admonition
+  - attr_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+nav:
+  - Introduction: index.md
+  - Getting Started:
+    - Installation: getting-started/installation.md
+    - Quick Start: getting-started/quick-start.md
+    - Configuration: getting-started/configuration.md
+  - Core Concepts:
+    - Authentication & Security: core-concepts/authentication.md
+    - Order Lifecycle: core-concepts/order-lifecycle.md
+    - Payment Flow: core-concepts/payment-flow.md
+  - API Reference:
+    - Client Setup: api-reference/client-setup.md
+    - Order Operations:
+      - Create Order: api-reference/orders/create-order.md
+      - Get Order: api-reference/orders/get-order.md
+  - Changelog: changelog.md
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/ali-aliyev-57393a168/
+    - icon: fontawesome/brands/github
+      link: https://github.com/alistein/
+
+copyright: 2025 <a href="https://www.linkedin.com/in/ali-aliyev-57393a168/">Ali Aliyev</a> & <a href="https://cibpay.az/en/home/">Cibpay</a>
