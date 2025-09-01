@@ -3,7 +3,7 @@
   <PropertyGroup>
     <!-- Package Identity -->
     <PackageId>CibPay.Sdk</PackageId>
-    <Version>1.0.0-preview.1</Version>
+    <Version>1.0.0-preview.2</Version>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
 
@@ -48,6 +48,7 @@
       - Async/await support
       - Type-safe models
       - Simple installation: dotnet add package CibPay.Sdk
+      - CibPay.Http Problem solved
     </PackageReleaseNotes>
 
     <!-- Build Configuration -->
@@ -73,9 +74,12 @@
     <None Include="../../docs/assets/CibPayFavicon.png" Pack="true" PackagePath="" />
   </ItemGroup>
 
-  <!-- Project References -->
+  <!-- Compile source files from other projects directly -->
   <ItemGroup>
-    <ProjectReference Include="../CibPay.Http/CibPay.Http.csproj" />
+    <Compile Include="../CibPay.Core/**/*.cs" Exclude="../CibPay.Core/obj/**;../CibPay.Core/bin/**"
+      LinkBase="CibPay.Core" />
+    <Compile Include="../CibPay.Http/**/*.cs" Exclude="../CibPay.Http/obj/**;../CibPay.Http/bin/**"
+      LinkBase="CibPay.Http" />
   </ItemGroup>
 
 </Project>
