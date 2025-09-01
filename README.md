@@ -74,7 +74,7 @@ Console.WriteLine($"Order created: {order.Data.Id}");
 
 
 ## Links & Resources
-- **[Official Documentation](https://docs.microsoft.com/en-us/dotnet/)** - CibPay SDK .NET docs
+- **[Official Documentation](https://alistein.github.io/cibpay-sdk-dotnet/)** - CibPay SDK .NET docs
 - **[Github Repository](https://github.com/alistein/cibpay-sdk-dotnet)** - Source code and issues
 - **[CibPay Website](https://cibpay.az/en/home/)** - Official CibPay information
 - **[.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)** - Microsoft .NET docs

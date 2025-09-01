@@ -16,6 +16,8 @@ Blueprint.md
 
 *.p12
 
+site/
+
 appsettings.json
 
 appsettings.Development.json
