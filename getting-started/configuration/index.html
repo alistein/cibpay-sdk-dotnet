@@ -456,15 +456,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#optional-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Optional Parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#aspnet-core-integration" class="md-nav__link">
     <span class="md-ellipsis">
       ASP.NET Core Integration
@@ -929,15 +920,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#optional-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Optional Parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#aspnet-core-integration" class="md-nav__link">
     <span class="md-ellipsis">
       ASP.NET Core Integration
@@ -1054,10 +1036,6 @@
 <span class="w">    </span><span class="n">CertificatePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Certificate/api-cibpay.p12&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="n">CertificatePassword</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;your-certificate-password&quot;</span><span class="p">,</span>
 
-<span class="w">    </span><span class="c1">// Optional</span>
-<span class="w">    </span><span class="n">ReturnUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://yoursite.com/payment/return&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="n">AutoCharge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">,</span>
-<span class="w">    </span><span class="n">Currency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;AZN&quot;</span>
 <span class="p">};</span>
 </code></pre></div>
 <h2 id="required-parameters">Required Parameters<a class="headerlink" href="#required-parameters" title="Permanent link">&para;</a></h2>
@@ -1113,48 +1091,6 @@
 <p><strong>Environment URLs:</strong>
 - <strong>Staging/Testing</strong>: <code>https://api-preprod.cibpay.co</code>
 - <strong>Production</strong>: Contact CibPay for production URL</p>
-<h2 id="optional-parameters">Optional Parameters<a class="headerlink" href="#optional-parameters" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ReturnUrl</code></td>
-<td><code>string?</code></td>
-<td>URL where users return after payment</td>
-</tr>
-<tr>
-<td><code>AutoCharge</code></td>
-<td><code>bool?</code></td>
-<td>Automatically charge after authorization</td>
-</tr>
-<tr>
-<td><code>Force3D</code></td>
-<td><code>bool?</code></td>
-<td>Force 3D Secure authentication</td>
-</tr>
-<tr>
-<td><code>Currency</code></td>
-<td><code>string?</code></td>
-<td>Default currency (&ldquo;AZN&rdquo;, &ldquo;USD&rdquo;, &ldquo;EUR&rdquo;)</td>
-</tr>
-<tr>
-<td><code>ExpirationTimeout</code></td>
-<td><code>string?</code></td>
-<td>Order timeout (&ldquo;30m&rdquo;, &ldquo;1h&rdquo;, &ldquo;1d&rdquo;)</td>
-</tr>
-<tr>
-<td><code>Language</code></td>
-<td><code>string?</code></td>
-<td>Interface language (&ldquo;en&rdquo;, &ldquo;az&rdquo;, &ldquo;ru&rdquo;)</td>
-</tr>
-</tbody>
-</table>
 <h2 id="aspnet-core-integration">ASP.NET Core Integration<a class="headerlink" href="#aspnet-core-integration" title="Permanent link">&para;</a></h2>
 <h3 id="appsettingsjson">appsettings.json<a class="headerlink" href="#appsettingsjson" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
@@ -1179,7 +1115,6 @@
 <span class="w">        </span><span class="n">BaseUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="p">[</span><span class="s">&quot;CibPay:BaseUrl&quot;</span><span class="p">]</span><span class="o">!</span><span class="p">,</span>
 <span class="w">        </span><span class="n">CertificatePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="p">[</span><span class="s">&quot;CibPay:CertificatePath&quot;</span><span class="p">]</span><span class="o">!</span><span class="p">,</span>
 <span class="w">        </span><span class="n">CertificatePassword</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="p">[</span><span class="s">&quot;CibPay:CertificatePassword&quot;</span><span class="p">]</span><span class="o">!</span><span class="p">,</span>
-<span class="w">        </span><span class="n">ReturnUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">config</span><span class="p">[</span><span class="s">&quot;CibPay:ReturnUrl&quot;</span><span class="p">]</span>
 <span class="w">    </span><span class="p">};</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CibPayClientFactory</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
 <span class="p">});</span>

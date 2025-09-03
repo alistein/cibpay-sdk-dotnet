@@ -1039,7 +1039,6 @@
 <span class="w">    </span><span class="n">BaseUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://api-preprod.cibpay.co&quot;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Use preprod for testing</span>
 <span class="w">    </span><span class="n">CertificatePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Certificate/api-cibpay.p12&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="n">CertificatePassword</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;your-certificate-password&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="n">ReturnUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://yoursite.com/payment/return&quot;</span>
 <span class="p">};</span>
 
 <span class="k">try</span>
@@ -1097,7 +1096,6 @@
 <span class="w">        </span><span class="n">BaseUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">configuration</span><span class="p">[</span><span class="s">&quot;CibPay:BaseUrl&quot;</span><span class="p">]</span><span class="o">!</span><span class="p">,</span>
 <span class="w">        </span><span class="n">CertificatePath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">configuration</span><span class="p">[</span><span class="s">&quot;CibPay:CertificatePath&quot;</span><span class="p">]</span><span class="o">!</span><span class="p">,</span>
 <span class="w">        </span><span class="n">CertificatePassword</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">configuration</span><span class="p">[</span><span class="s">&quot;CibPay:CertificatePassword&quot;</span><span class="p">]</span><span class="o">!</span><span class="p">,</span>
-<span class="w">        </span><span class="n">ReturnUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">configuration</span><span class="p">[</span><span class="s">&quot;CibPay:ReturnUrl&quot;</span><span class="p">]</span>
 <span class="w">    </span><span class="p">};</span>
 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">CibPayClientFactory</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
@@ -1144,7 +1142,6 @@
 <span class="w">    </span><span class="nt">&quot;BaseUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api-preprod.cibpay.co&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;CertificatePath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Certificate/api-cibpay.p12&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;CertificatePassword&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your-certificate-password&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;ReturnUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://yoursite.com/payment/return&quot;</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
