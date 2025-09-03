@@ -47,7 +47,6 @@ var options = new SdkOptions
     BaseUrl = "https://api-preprod.cibpay.co",
     CertificatePath = "Certificate/api-cibpay.p12",
     CertificatePassword = "your-cert-password",
-    ReturnUrl = "https://yoursite.com/payment/return"
 };
 
 // Create client

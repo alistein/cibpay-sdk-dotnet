@@ -1,5 +1,6 @@
 using CibPay.Http.Configuration;
 using CibPay.Sdk;
+using CibPaySdk.Core.Exceptions;
 using CibPaySdk.Core.Models;
 using CibPaySdk.Core.Types;
 using Microsoft.AspNetCore.Mvc;
@@ -18,7 +19,6 @@ builder.Services.AddSingleton<CibPayClient>(serviceProvider =>
 		BaseUrl = configuration["CibPay:BaseUrl"]!,
 		CertificatePath = configuration["CibPay:CertificatePath"]!,
 		CertificatePassword = configuration["CibPay:CertificatePassword"]!,
-		ReturnUrl = configuration["CibPay:ReturnUrl"]
 	};
 
 	return CibPayClientFactory.Create(options);
@@ -26,16 +26,30 @@ builder.Services.AddSingleton<CibPayClient>(serviceProvider =>
 
 var app = builder.Build();
 
-app.MapPost("/orders", async (CibPayClient client, CreateOrderRequest request) =>
+app.MapPost("/orders", async ([FromServices] CibPayClient client) =>
 {
 	try
 	{
+
+		CreateOrderRequest request = new()
+		{
+			Amount = 20,
+			Currency = "AZN",
+			Options = new Options
+			{
+				Language = "en",
+				ReturnUrl = "https://senetgah.com",
+				ExpirationTimeout = "15m",
+			}
+
+		};
+
 		var response = await client.Orders.CreateAsync(request);
 		return Results.Ok(response);
 	}
-	catch (Exception ex)
+	catch (CibPayApiException ex)
 	{
-		return Results.BadRequest(new { error = ex.Message });
+		return Results.BadRequest(new { error = ex.ValidationErrors.First().Message });
 	}
 });
 

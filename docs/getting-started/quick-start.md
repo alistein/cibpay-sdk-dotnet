@@ -67,7 +67,6 @@ var options = new SdkOptions
     BaseUrl = "https://api-preprod.cibpay.co", // Use preprod for testing
     CertificatePath = "Certificate/api-cibpay.p12",
     CertificatePassword = "your-certificate-password",
-    ReturnUrl = "https://yoursite.com/payment/return"
 };
 
 try
@@ -130,7 +129,6 @@ builder.Services.AddSingleton<CibPayClient>(serviceProvider =>
         BaseUrl = configuration["CibPay:BaseUrl"]!,
         CertificatePath = configuration["CibPay:CertificatePath"]!,
         CertificatePassword = configuration["CibPay:CertificatePassword"]!,
-        ReturnUrl = configuration["CibPay:ReturnUrl"]
     };
     
     return CibPayClientFactory.Create(options);
@@ -180,7 +178,6 @@ app.Run();
     "BaseUrl": "https://api-preprod.cibpay.co",
     "CertificatePath": "Certificate/api-cibpay.p12",
     "CertificatePassword": "your-certificate-password",
-    "ReturnUrl": "https://yoursite.com/payment/return"
   }
 }
 ```

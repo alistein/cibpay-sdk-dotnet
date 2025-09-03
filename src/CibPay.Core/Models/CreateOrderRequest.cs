@@ -24,6 +24,7 @@ public class CreateOrderRequest
 
     [JsonPropertyName("client")]
     public RequestedClient? Client { get; set; }
+
 }
 
 public class ExtraFields

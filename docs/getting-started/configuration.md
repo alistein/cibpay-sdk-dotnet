@@ -15,11 +15,7 @@ var options = new SdkOptions
     BaseUrl = "https://api-preprod.cibpay.co",
     CertificatePath = "Certificate/api-cibpay.p12",
     CertificatePassword = "your-certificate-password",
-    
-    // Optional
-    ReturnUrl = "https://yoursite.com/payment/return",
-    AutoCharge = true,
-    Currency = "AZN"
+  
 };
 ```
 
@@ -44,16 +40,7 @@ var options = new SdkOptions
 - **Staging/Testing**: `https://api-preprod.cibpay.co`
 - **Production**: Contact CibPay for production URL
 
-## Optional Parameters
 
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `ReturnUrl` | `string?` | URL where users return after payment |
-| `AutoCharge` | `bool?` | Automatically charge after authorization |
-| `Force3D` | `bool?` | Force 3D Secure authentication |
-| `Currency` | `string?` | Default currency ("AZN", "USD", "EUR") |
-| `ExpirationTimeout` | `string?` | Order timeout ("30m", "1h", "1d") |
-| `Language` | `string?` | Interface language ("en", "az", "ru") |
 
 ## ASP.NET Core Integration
 
@@ -83,7 +70,6 @@ builder.Services.AddSingleton<CibPayClient>(provider =>
         BaseUrl = config["CibPay:BaseUrl"]!,
         CertificatePath = config["CibPay:CertificatePath"]!,
         CertificatePassword = config["CibPay:CertificatePassword"]!,
-        ReturnUrl = config["CibPay:ReturnUrl"]
     };
     return CibPayClientFactory.Create(options);
 });

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <!-- Package Identity -->
     <PackageId>CibPay.Sdk</PackageId>
-    <Version>1.0.0-preview.2</Version>
+    <Version>1.0.0-preview.3</Version>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
 
@@ -41,14 +41,9 @@
     <!-- Release Notes -->
     <PackageReleaseNotes>
       Preview release of CibPay .NET SDK featuring:
-      - Complete all-in-one package (no additional dependencies needed)
-      - Certificate-based authentication
-      - Order creation and retrieval
-      - Comprehensive error handling
-      - Async/await support
-      - Type-safe models
-      - Simple installation: dotnet add package CibPay.Sdk
-      - CibPay.Http Problem solved
+      - ReturnUrl, Force3D and other options no longer required in SdkOptions, you can pass it
+      directly when creating in order
+      - Several documentation enhancement both in inline code and for Error handling and Requests.
     </PackageReleaseNotes>
 
     <!-- Build Configuration -->
