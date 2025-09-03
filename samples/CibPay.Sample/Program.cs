@@ -8,8 +8,6 @@ var cibPayClient = CibPayClientFactory.Create(
         Username = "test_username_123",
         Password = "test_password_456",
         BaseUrl = "https://sandbox-api.example.com",
-        ReturnUrl = "https://your-test-site.com/callback",
-        PaymentUrl = "https://sandbox-checkout.example.com/pay",
         CertificatePassword = "test_cert_pass_789",
         CertificatePath = "Certificate/test-certificate.p12"
     }
